@@ -26,7 +26,7 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "compile:server": "webpack --config webpack.server.config.js --progress --colors",
+    "compile:server": "webpack --config apps/dev-the-spiciest/webpack.server.config.js --progress --colors",
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run dev-the-spiciest:server:production --bundleDependencies all"

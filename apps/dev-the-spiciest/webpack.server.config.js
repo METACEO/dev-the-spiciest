@@ -7,7 +7,7 @@ module.exports = {
   mode: 'none',
   entry: {
     // This is our Express server for Dynamic universal
-    server: './server.ts'
+    server: './apps/dev-the-spiciest/server.ts'
   },
   externals: {
     './dist/server/main': 'require("./server/main")'
@@ -19,7 +19,7 @@ module.exports = {
   },
   output: {
     // Puts the output at the root of the dist folder
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '../../dist/apps/dev-the-spiciest/server'),
     filename: '[name].js'
   },
   module: {

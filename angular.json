@@ -15,7 +15,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/browser",
+            "outputPath": "dist/apps/dev-the-spiciest/browser",
             "index": "apps/dev-the-spiciest/src/index.html",
             "main": "apps/dev-the-spiciest/src/main.ts",
             "polyfills": "apps/dev-the-spiciest/src/polyfills.ts",
@@ -101,7 +101,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/server",
+            "outputPath": "dist/apps/dev-the-spiciest/server",
             "main": "apps/dev-the-spiciest/src/main.server.ts",
             "tsConfig": "apps/dev-the-spiciest/tsconfig.server.json"
           },
@@ -114,10 +114,7 @@
                 }
               ],
               "sourceMap": false,
-              "optimization": {
-                "scripts": false,
-                "styles": true
-              }
+              "optimization": true
             }
           }
         }
