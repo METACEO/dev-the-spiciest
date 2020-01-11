@@ -15,7 +15,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/dev-the-spiciest",
+            "outputPath": "dist/browser",
             "index": "apps/dev-the-spiciest/src/index.html",
             "main": "apps/dev-the-spiciest/src/main.ts",
             "polyfills": "apps/dev-the-spiciest/src/polyfills.ts",
@@ -25,7 +25,9 @@
               "apps/dev-the-spiciest/src/favicon.ico",
               "apps/dev-the-spiciest/src/assets"
             ],
-            "styles": ["apps/dev-the-spiciest/src/styles.scss"],
+            "styles": [
+              "apps/dev-the-spiciest/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -94,6 +96,29 @@
             "jestConfig": "apps/dev-the-spiciest/jest.config.js",
             "tsConfig": "apps/dev-the-spiciest/tsconfig.spec.json",
             "setupFile": "apps/dev-the-spiciest/src/test-setup.ts"
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/server",
+            "main": "apps/dev-the-spiciest/src/main.server.ts",
+            "tsConfig": "apps/dev-the-spiciest/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/dev-the-spiciest/src/environments/environment.ts",
+                  "with": "apps/dev-the-spiciest/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": {
+                "scripts": false,
+                "styles": true
+              }
+            }
           }
         }
       }
