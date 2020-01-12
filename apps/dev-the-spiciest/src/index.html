@@ -6,6 +6,24 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script>
+      (function(loc) {
+        var target = 'the.spiciest.dev';
+        // If we're local (developing) don't redirect.
+        if (loc.host === 'localhost:4200') {
+          return;
+        }
+        // If we're already with "the", don't redirect.
+        if (loc.hostname === target) {
+          return;
+        }
+        // Othewise we're elsewhere ("www") so redirect.
+        var pathname = loc.pathname;
+        var search = loc.search;
+        var hash = loc.hash;
+        loc.assign(['https://', target, pathname, search, hash].join(''));
+      })(location);
+    </script>
   </head>
   <body>
     <dev-the-spiciest-root></dev-the-spiciest-root>
