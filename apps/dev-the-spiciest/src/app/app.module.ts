@@ -12,6 +12,7 @@ import { NavigationModule } from './components/navigation/navigation.module';
     RouterModule.forRoot([
       {
         path: '',
+        pathMatch: 'full',
         loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
       },
       {
