@@ -1,0 +1,37 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-brand">
+      <span class="navbar-item brand-text">
+        James Allen
+        <span class="handle">@TheSpiciestDev</span>
+      </span>
+      <span class="navbar-burger burger" (click)="toggleShowMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+    <div class="navbar-menu" [class.is-active]="showMenu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Platforms
+          </a>
+          <div class="navbar-dropdown">
+            <ng-container *ngFor="let link of links">
+              <ng-container *ngIf="link !== null; else RenderLinkDivider">
+                <a class="navbar-item" rel="me" [href]="link.href">
+                  <i [ngClass]="['fab', 'fa-fw', link.icon]"></i>
+                  <span>{{link.name}}</span>
+                </a>
+              </ng-container>
+              <ng-template #RenderLinkDivider>
+                <hr class="navbar-divider" />
+              </ng-template>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
