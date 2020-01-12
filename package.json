@@ -5,7 +5,9 @@
   "scripts": {
     "ng": "ng",
     "nx": "nx",
-    "start": "concurrently -k \"ng serve\" \"ng serve api\"",
+    "start": "concurrently -k \"yarn start-frontend\" \"yarn start-backend\"",
+    "start-frontend": "ng serve --live-reload false",
+    "start-backend": "ng serve api",
     "build": "ng build",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
