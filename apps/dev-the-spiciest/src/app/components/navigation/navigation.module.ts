@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { NavigationComponent } from './navigation.component';
 
@@ -8,7 +9,8 @@ import { NavigationComponent } from './navigation.component';
     NavigationComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     NavigationComponent
