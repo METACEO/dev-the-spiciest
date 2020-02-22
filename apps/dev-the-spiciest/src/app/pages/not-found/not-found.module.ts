@@ -8,7 +8,6 @@ import { NotFoundComponent } from './not-found.component';
   declarations: [NotFoundComponent],
   imports: [
     CommonModule,
-    RouterModule,
     RouterModule.forChild([
       {
         path: '',
