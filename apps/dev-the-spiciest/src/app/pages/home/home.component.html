@@ -1,8 +1,54 @@
-<div style="text-align:center">
-  <h1>Welcome to dev-the-spiciest!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png"
-  />
+<section class="hero is-dark is-bold is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        Links. Posts. Projects. Code.
+      </h1>
+      <h2 class="subtitle">
+        Click <b><a href="https://github.com/METACEO/dev-the-spiciest">here</a></b> to find this website's source.
+      </h2>
+      <div class="buttons is-centered">
+        <a href="https://github.com/METACEO/dev-the-spiciest/issues" class="button is-link is-large is-inverted is-outlined">
+          <i class="fab fa-fw fa-github"></i>
+          &nbsp;
+          <span>Report an issue</span>
+        </a>
+        <a href="https://github.com/METACEO/dev-the-spiciest/issues" class="button is-link is-large is-inverted is-outlined">
+          <i class="fab fa-fw fa-github"></i>
+          &nbsp;
+          <span>Request a post</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container posts">
+  <div class="card">
+    <div class="card-content">
+      <div class="content-header">
+        <figure class="image is-128x128">
+          <img class="is-rounded" src="https://d33v6bah4t8f39.cloudfront.net/self.jpg"/>
+        </figure>
+        <strong>James Allen</strong>
+        <p>Feburary 21st, 2020</p>
+      </div>
+      <div class="content-post">
+        <div class="content">
+          <h1>Initial commit</h1>
+          <p>Commiting something here to replace the generated Nx page - more coming soon.</p>
+          <p>Some message: <strong>{{ (hello$|async)?.message }}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div>Message: {{ hello$ | async | json }}</div>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <a routerLink="/">the.spiciest.dev</a> by <strong>James Allen</strong>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+    </p>
+  </div>
+</footer>

@@ -14,9 +14,7 @@
     <div class="navbar-menu" [class.is-active]="showMenu">
       <div class="navbar-end">
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            Platforms
-          </a>
+          <a class="navbar-link">Channels</a>
           <div class="navbar-dropdown">
             <ng-container *ngFor="let link of links">
               <ng-container *ngIf="link !== null; else RenderLinkDivider">
