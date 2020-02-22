@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -9,6 +10,7 @@ import { NavigationModule } from './components/navigation/navigation.module';
   declarations: [AppComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: '',
