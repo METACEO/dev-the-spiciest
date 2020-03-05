@@ -18,6 +18,10 @@ import { NavigationModule } from './components/navigation/navigation.module';
         loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
       },
       {
+        path: 'examples/dynamically-loading-charts',
+        loadChildren: () => import('./pages/examples/dynamically-loading-charts/dynamically-loading-charts.module').then(m => m.DynamicallyLoadingChartsModule)
+      },
+      {
         path: '**',
         loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundModule)
       }
