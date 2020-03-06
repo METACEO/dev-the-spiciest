@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+// Anything loaded by our router, apply any
+// positioning. This will allow the component
+// loaded by the router to remain free of any
+// specific styling conditions.
+::ng-deep {
+  dev-the-spiciest-dynamically-loading-charts {
+    flex-grow: 1;
+    margin-top: 1.5rem;
+  }
+}
