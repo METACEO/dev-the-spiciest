@@ -1,4 +1,3 @@
-
 export interface DynamicallyLoadingChartsServiceState {
   charts: Chart[];
   scriptLoaded: boolean;
